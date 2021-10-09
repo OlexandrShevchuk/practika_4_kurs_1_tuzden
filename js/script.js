@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let error = formValid(form);
 
         if (error === 0) {
-            form.classList.add('_sending');
+            form.parentElement.parentElement.classList.add('_sending');
 
             // let response = await fetch('sendmail.php',{
             //     method: 'POST',
