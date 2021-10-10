@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Comfortaa";
   font-display: swap;
@@ -180,23 +182,6 @@ body {
   text-shadow: #000 1px 0px 10px;
 }
 
-.footer {
-  font-size: 15px;
-}
-
-.footer__body {
-  border-top: 1px solid #000;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  -moz-column-gap: 400px;
-       column-gap: 400px;
-  padding-left: 80px;
-  padding-right: 80px;
-  display: flex;
-  align-items: center;
-  flex: 0 1 80%;
-}
-
 .menu {
   position: absolute;
   width: 100%;
@@ -320,13 +305,14 @@ body {
 }
 
 ._sending {
+  content: "Loading";
   border-radius: 25px;
   background-color: #898989;
 }
 
 ._ok {
   border-radius: 25px;
-  background-color: #496a49;
+  background-color: #91d091;
 }
 
 .info {
@@ -596,31 +582,6 @@ body {
     margin-bottom: calc(13px + -6 * ((100vw - 320px) / 950));
   }
 
-  .footer {
-    font-size: calc(10px + 5 * ((100vw - 320px) / 950));
-  }
-
-  .footer__body {
-    padding-top: calc(30px + -20 * ((100vw - 320px) / 950));
-  }
-
-  .footer__body {
-    padding-bottom: calc(30px + -20 * ((100vw - 320px) / 950));
-  }
-
-  .footer__body {
-    -moz-column-gap: calc(30px + 370 * ((100vw - 320px) / 950));
-         column-gap: calc(30px + 370 * ((100vw - 320px) / 950));
-  }
-
-  .footer__body {
-    padding-left: calc(30px + 50 * ((100vw - 320px) / 950));
-  }
-
-  .footer__body {
-    padding-right: calc(30px + 50 * ((100vw - 320px) / 950));
-  }
-
   .zavd__text {
     margin-bottom: calc(2px + 3 * ((100vw - 320px) / 950));
   }
@@ -637,11 +598,34 @@ body {
     margin-bottom: calc(2px + 3 * ((100vw - 320px) / 950));
   }
 }
+
+@media (max-width: 1185px) {
+  .wrapper::after {
+    content: "Створена тільки комп'ютерна версія сайту (Розширення > 1185px)";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .c {
+    display: none;
+  }
+}
 @supports (-webkit-appearance:none){
 
 }
 
  @media (max-width: 1270px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1185px){
 
 @supports (-webkit-appearance:none){
 

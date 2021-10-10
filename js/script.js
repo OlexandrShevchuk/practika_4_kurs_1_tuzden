@@ -16,7 +16,7 @@ testWebP(function (support) {
 
 ;
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form');
+    const form = document.getElementById('form-suport');
 
     form.addEventListener('submit', checkEmail);
 
@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
             //     form.classList.remove('_seding');
             // }
         } else {
-            alert("Заповніть обов'язкове поле")
+            form.parentElement.parentElement.classList.remove('_sending');
+            alert("Заповніть обов'язкові поля")
         }
 
     }
